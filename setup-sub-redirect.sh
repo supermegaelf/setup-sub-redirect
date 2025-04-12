@@ -27,7 +27,7 @@ wget -q https://raw.githubusercontent.com/supermegaelf/sub-redirect/main/index.h
 sudo chown -R www-data:www-data /var/www/redirect
 sudo chmod -R 755 /var/www/redirect
 
-echo "Replace domain for redirect with '$domain' in sub page file: /var/lib/marzban/templates/subscription/index.html"
+echo "Replace `example.con` for redirect with '$domain' in sub page file: /var/lib/marzban/templates/subscription/index.html"
 read -p "Proceed? (y/n): " confirm
 
 if [ "$confirm" != "y" ]; then
