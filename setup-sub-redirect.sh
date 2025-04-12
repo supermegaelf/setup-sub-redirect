@@ -28,7 +28,7 @@ sudo chown -R www-data:www-data /var/www/redirect
 sudo chmod -R 755 /var/www/redirect
 
 echo "Replace 'example.com' with '$domain' in sub file: /var/lib/marzban/templates/subscription/index.html"
-read -p "Done? (y/n): " confirm
+read -p "Proceed? (y/n): " confirm
 
 if [ "$confirm" != "y" ]; then
     echo "Operation aborted."
