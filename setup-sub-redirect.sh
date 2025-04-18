@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Main domain: " domain
+read -p $'\033[32mMain domain: \033[0m' domain
 
 cat > /etc/nginx/conf.d/redirect.conf << EOL
 server {
@@ -28,7 +28,7 @@ sudo chown -R www-data:www-data /var/www/redirect
 sudo chmod -R 755 /var/www/redirect
 
 echo "Replace 'example.com' with '$domain' in sub file: /var/lib/marzban/templates/subscription/index.html"
-read -p "Proceed? (y/n): " confirm
+read -p $'\033[32mProceed? (y/n): \033[0m' confirm
 
 if [ "$confirm" != "y" ]; then
     echo "Operation aborted."
